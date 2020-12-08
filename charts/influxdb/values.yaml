@@ -1,9 +1,12 @@
 elastisys_custom:
   ## The following values must be set in order to use the chart.
-  # influx_addr:
-  # influxdb_user:
-  # influxdb_password:
-  # s3_credentials:
+  influxdbAdminUser:
+  influxdbAdminPassword:
+  influxdbWCWriterUser:
+  influxdbWCWriterPassword:
+  influxdbSCWriterUser:
+  influxdbSCWriterPassword:
+  s3_credentials:
   metrics:
     enabled: true
     # The schedule for running the metrics exporter.
