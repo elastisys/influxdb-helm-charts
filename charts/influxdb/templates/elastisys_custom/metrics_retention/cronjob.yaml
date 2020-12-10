@@ -37,12 +37,12 @@ spec:
                 valueFrom:
                   secretKeyRef:
                     name: influxdb-auth
-                    key: INFLUXDB_USER
+                    key: INFLUXDB_ADMIN_USER
               - name: INFLUXDB_PASSWORD
                 valueFrom:
                   secretKeyRef:
                     name: influxdb-auth
-                    key: INFLUXDB_PWD
+                    key: INFLUXDB_ADMIN_PWD
               - name: INFLUXDB_DATABASE
                 value: {{ $key | quote }}
               - name: INFLUXDB_MIN_SHARDS
@@ -50,7 +50,7 @@ spec:
               - name: INFLUXDB_DATABASE_SIZE_LIMIT
                 value: {{ $val.data_size_limit | quote }} 
               - name: PROMETHEUS_HOST
-                value: prometheus-operator-prometheus.monitoring
+                value: kube-prometheus-stack-prometheus.monitoring
               - name: PROMETHEUS_PORT
                 value: "9090"
               - name: PROMETHEUS_INFLUXDB_METRIC
