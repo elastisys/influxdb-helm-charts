@@ -323,6 +323,9 @@ backup:
     ##   GKE, AWS & OpenStack)
     ##
     # storageClass: "-"
+
+    # If the backup should be deleted locally after it has been uploaded to the cloud.
+    purge: false
     annotations:
     accessMode: ReadWriteOnce
     size: 8Gi
